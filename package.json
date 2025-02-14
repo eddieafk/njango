@@ -1,0 +1,21 @@
+{
+  "name": "njango.js",
+  "version": "0.0.1",
+  "description": "An imitation of Django in NodeJS",
+  "main": "main.js",
+
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  },
+
+  "author": "eddieafk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eddieafk/njango/issues"
+  },
+  "homepage": "https://github.com/eddieafk/njango#readme",
+
+  "type": "module"
+}

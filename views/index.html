@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Hoş Geldiniz!</h1>
+
+    {% if showMessage %}
+        <p>Bu mesaj sadec<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Hoş Geldiniz, {{ user }}!</h1>
+
+    {% if role == "admin" %}
+        <p>🛠 Yönetici Paneline Hoş Geldiniz.</p>
+    {% elif role == "moderator" %}
+        <p>✅ Moderatör olarak içerikleri yönetebilirsiniz.</p>
+    {% else %}
+        <p>👤 Standart kullanıcı olarak giriş yaptınız.</p>
+    {% endif %}
+
+    <h2>Favori Meyveler:</h2>
+    <ul>
+        {% for fruit in fruits %}
+            <li>{{ fruit }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/logout">Çıkış Yap</a>
+</body>
+</html>
