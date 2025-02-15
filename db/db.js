@@ -1,4 +1,5 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
+import Fields from './fields.js'
 
 const sequelize = new Sequelize({
         dialect: 'sqlite',
@@ -12,7 +13,14 @@ class BaseModel extends Model {
         if (!options || !options.sequelize) {
             throw new Error('Sequelize instance is missing in options.');
         }
-        return super.init(attributes, options);
+
+        // Tüm modellere otomatik ID ekle
+        const defineAttributes = {
+            id: Fields.IntegerField({ autoIncrement: true, primaryKey: true }),
+            ...attributes 
+        };
+
+        return super.init(defineAttributes, options);
     }
 
     static async syncModel() {

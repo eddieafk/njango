@@ -160,6 +160,7 @@ app.post('/api/token/refresh', async (req, res) => {
     }
 });
 
+export default app
+
 // 📌 Sunucuyu başlat
-const server = http.createServer((req, res) => app.handleRequest(req, res));
-server.listen(3000, () => console.log('Server running on http://localhost:3000'));
+
